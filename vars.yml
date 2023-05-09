@@ -11,6 +11,18 @@
 # ansible supports single and double quotes
 #quotes are notmandatory if variable starts with value
 
+- name: load vars from a file
+  hosts: all
+  vars_files:
+    - exvars.yml
+  tasks:
+    - name: print URL
+      ansible.builtin.debug:
+        msg: URL - {{URL}}
+
+
+
+
 - name: Demo on Task level variable
   hosts: all
   tasks:
