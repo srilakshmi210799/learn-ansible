@@ -1,6 +1,6 @@
 - name: Demo on first playbook
   hosts: all
-  msg: hello world
+
 
 
 
