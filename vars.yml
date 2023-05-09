@@ -10,3 +10,12 @@
 # in ansible variable will be access using {{}},
 # ansible supports single and double quotes
 #quotes are notmandatory if variable starts with value
+
+- name: Demo on Task level variable
+  hosts: all
+  tasks:
+    - name: print URL
+      ansible.builtin.debug:
+        msg: URL - {{URL}}
+  vars:
+    URL: play.example.com
